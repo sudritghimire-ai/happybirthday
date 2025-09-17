@@ -8,8 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 
-
-    
     <style>
         .box {
             width: 300px;
@@ -52,6 +50,7 @@
             <button id="submit-button" onclick="validate()">Submit</button>
         </div>
     </div>
+
     <script>
         var i = 0;
         var txt = 'Hi,\nMy name is SUD-01, I am your virtual assistant.\n\nPlease type your name below to get started.';
@@ -66,30 +65,27 @@
                 // Show the input and button after 1 second
                 setTimeout(function() {
                     document.getElementById("input-container").style.display = 'block';
-                }, 900); // 1000 milliseconds = 1 second
+                }, 900); 
             }
         }
 
         typeWriter();
 
-<script>
-    function validate() {
-        var name = document.getElementById("name-input").value.toLowerCase(); // lowercase
-        var trueName = "pringo"; // only valid name
-        var guessName = "deepika"; // decoy
+        function validate() {
+            var name = document.getElementById("name-input").value.toLowerCase(); // lowercase
+            var trueName = "pringo"; // only valid name
+            var guessName = "deepika"; // decoy
 
-        if (name === trueName) {
-            window.location.href = 'index1.html'; // Redirect if correct
-        } else if (name === guessName) {
-            alert("A lovely name 💕 but I’ll always remember the first special name you had in my heart 🌸");
-            document.getElementById("name-input").value = ""; // clear input
-        } else {
-            alert("I am sorry, this website is only for my bebss 😌😌😌");
-            document.getElementById("name-input").value = ""; // clear input
+            if (name === trueName) {
+                window.location.href = 'index1.html'; // Redirect if correct
+            } else if (name === guessName) {
+                alert("A lovely name 💕 but I’ll always remember the first special name you had in my heart 🌸");
+                document.getElementById("name-input").value = ""; // clear input
+            } else {
+                alert("I am sorry, this website is only for my bebss 😌😌😌");
+                document.getElementById("name-input").value = ""; // clear input
+            }
         }
-    }
-
-        
     </script>
-</body>
+</body> 
 </html>
