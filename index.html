@@ -72,17 +72,24 @@
 
         typeWriter();
 
+<script>
+    function validate() {
+        var name = document.getElementById("name-input").value.toLowerCase(); // lowercase
+        var trueName = "pringo"; // only valid name
+        var guessName = "deepika"; // decoy
 
-        function validate() {
-    var name = document.getElementById("name-input").value.toLowerCase(); // Convert input to lowercase
-    var validNames = ["jenisha","sudrit","swikriti"]; // Array of valid names
-
-    if (validNames.includes(name)) {
-        window.location.href = 'index1.html'; // Redirect to index1.html
-    } else {
-        alert("I am sorry , this website is only for my bebss 😌😌😌"); // Display an alert if the name is not valid
+        if (name === trueName) {
+            window.location.href = 'index1.html'; // Redirect if correct
+        } else if (name === guessName) {
+            alert("A lovely name 💕 but I’ll always remember the first special name you had in my heart 🌸");
+            document.getElementById("name-input").value = ""; // clear input
+        } else {
+            alert("I am sorry, this website is only for my bebss 😌😌😌");
+            document.getElementById("name-input").value = ""; // clear input
+        }
     }
-}
+</script>
+        
     </script>
 </body>
 </html>
